@@ -22,7 +22,6 @@
         var modal = document.getElementById("myModal");
 
         $scope.showProductDetails = function (data) {
-            console.log("Model is.........", data);
             $scope.singleData = data;
             modal.style.display = "block";
         };
