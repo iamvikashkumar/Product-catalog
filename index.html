@@ -28,7 +28,7 @@
                 <div id="test1" class="col s12">
                     <!-- <h6>{{data.Mandrill.image}}</h6> -->
                     <div class="column" ng-repeat="data in general">
-                        <div ng-click="showProductDetails()" id="completeDetails" layout="column" style="width: 190px"
+                        <div ng-click="showProductDetails(data)" id="completeDetails" style="width: 190px"
                             class="tile col s1">
                             <img class="pic" ng-src="{{data.image}}" alt="Smiley face" width="100" height="100">
                             <div class="name">{{data.name}}</div>
@@ -40,7 +40,8 @@
                 </div>
                 <div id="test2" class="col s12">
                     <div class="column" ng-repeat="data in other">
-                        <div style="width: 190px" class="tile col s1">
+                        <div ng-click="showProductDetails(data)" id="completeDetails" style="width: 190px"
+                            class="tile col s1">
                             <img class="pic" ng-src="{{data.image}}" alt="Smiley face" width="100" height="100">
                             <div class="name">{{data.name}}</div>
                             <div class="author">Author - {{data.author}}</div>
@@ -55,7 +56,11 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span ng-click="close()" class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <img class="pic" ng-src="{{singleData.image}}" alt="Smiley face" width="200" height="200">
+                <div class="name">Name - {{singleData.name}}</div>
+                <div class="author">Author - {{singleData.author}}</div>
+                <div class="key">Key - {{singleData.key}}</div>
+                <div class="description">Description -{{singleData.description}}</div>
             </div>
         </div>
 
